@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Home</title>
+</head>
+<body>
+    <h2 style="color:blue" align="center">Lillian</h2>
+    <hr>
+    <div style="text-align: center;">
+    <a  href="home.html">Home Page</a>&nbsp;
+    <a  href="application.html">Application Form</a>
+    </div>
+    <hr>
+    <form action="server.php" method="post">
+        <fieldset>
+            <legend align="center">Application form</legend>
+            <table align="center">
+                <tr>
+                    <td>Name</td>
+                    <td><input type="text" placeholder="Enter your name" required></td>
+                </tr>
+                <tr>
+                    <td>Applicatione Number</td>
+                    <td><input type="text" placeholder="URK20CS1056" required></td>
+                </tr>
+                <tr>
+                    <td>Password</td>
+                    <td><input type="pass" placeholder="Enter your password" required></td>
+                </tr>
+                <tr>
+                    <td>Date Of Birth</td>
+                    <td><input type="date" placeholder="Select date" required></td>
+                </tr>
+                <tr>
+                    <td>Age</td>
+                    <td><input type="Number" placeholder="Enter your age" required></td>
+                </tr>
+                <tr>
+                    <td>Mobile Number</td>
+                    <td><input type="tel" placeholder="Enter Mobile Number" pattern=[0-9]{10} required></td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td><input type="text" placeholder="Enter Email id" required></td>
+                </tr>
+                <tr>
+                    <td>Gender</td>
+                    <td><input type="radio" name="Gender" value="Male">Male</td>
+                    <td><input type="radio" name="Gender" value="Female">Female</td>
+                </tr>
+                <tr>
+                    <td>Address</td>
+                    <td>
+                        <textarea name="Address" rows="8" cols="19" required></textarea>
+                    </td>
+                    
+                </tr>
+                <tr>
+                    <td>Languages known:</td>
+                    <td><input type="checkbox" name="languages[]" value="English" >English</td>
+                    <td><input type="checkbox" name="languages[]" value="Tamil" >Tamil</td>
+                    <td><input type="checkbox" name="languages[]" value="Malyalam" >Malyalam</td>
+                    <td><input type="checkbox" name="languages[]" value="Telugu" >Telugu</td>
+                    <td><input type="checkbox" name="languages[]" value="Hindi" >Hindi</td>
+                </tr>
+                <tr>
+                    <td>Select your Course</td>
+                    <td><select name="course" id="course" required>
+                        <option value="B.tech Computer Science and Engineering">B.tech Computer Science and Engineering</option>
+                        <option value="BCom">BCom</option>
+                        <option value="Food Processing">Food Processing</option>
+                        <option value="Electronics and Communication Engineering">Electronics and Communication Engineering</option>
+                        <option value="Mechanical Engineering">Mechanical Engineering</option>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Upload your photo</td>
+                    <td><input type="file" name="file" required></td>
+
+                </tr>
+                <tr>
+                    <td> </td>
+                    <td><progress id="file" value="50" max="100"></progress>50% Uploading Completed
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" value="Submit" required></td>
+                </tr>
+
+
+
+            </table>
+        </fieldset>
+
+    </form>
+</body>
+</html>
