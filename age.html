@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="expe7.css">
+    <script>
+        $(document).ready(function() {
+            $('#b1').click(function(){
+                let d1=$('#t1').val();
+                let m1=$('#t2').val();
+                let y1=$('#t3').val();
+
+                let date = new Date();
+                let d2 = date.getDate();
+                let m2 = 1 + date.getMonth();
+                let y2 = date.getFullYear();
+                let month = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+
+                if(d1 > d2){
+                    d2 = d2 + month[m2 - 1];
+                    m2 = m2 - 1;
+                }
+                if(m1 > m2){
+                    m2 = m2 + 12;
+                    y2 = y2 - 1;
+                }
+                let d = d2 - d1;
+                let m = m2 - m1;
+                let y = y2 - y1;
+                $('#box').html("Age Details ");
+                $('#result').html(+y+" years "+m+" months "+d+" days")
+ 
+})
+   })
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="d1">Age Calculator</div>
+    <div id="d2">Enter the Birth Date</div>
+    <p>Day <br><input id="t1" type="text"></p><br>
+    <p>Months <br><input id="t2" type="text"></p><br>
+    <p>Years <br><input id="t3" type="text"></p><br>
+    <button id="b1">Final Age</button><br><br>
+    <hr><hr>
+    <br><br>
+    <div id="box"></div>
+    <div id="result" type="text" readonly></div>
+</body>
+</html>
