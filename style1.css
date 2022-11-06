@@ -1,0 +1,29 @@
+*{
+    margin: 0px;
+}
+
+html,body{
+    height: 100%;
+}
+
+h1{
+    text-align: center;
+}
+
+.sidebar{
+    width: 20%;
+    height: 100%;
+    float: left;
+    border-right: 1px solid black;
+}
+
+.sidebar a{
+    display: block;
+}
+
+.content{
+    width: 70%;
+    height: 100%;
+    float: left;
+    border: 1px solid blue;
+}
